@@ -1,0 +1,22 @@
+{
+    "name": "angular-popup",
+    "version": "0.5.0",
+    "authors": [
+        "Sean McCann"
+    ],
+    "description": "Angular Popup/Modal directive. Provides an overlay of content which will drop in and out of view accompanied by a fading backdrop.",
+    "main": [
+        "src/sm.popup.js",
+        "src/sm.popup.css"
+    ],
+    "keywords": [
+        "angular",
+        "angularjs",
+        "modal",
+        "popup"
+    ],
+    "license": "MIT",
+    "dependencies": {
+        "angular": "~1"
+    }
+}

@@ -1,0 +1,54 @@
+.sm-popup-backdrop {
+	background-color: rgba(0,0,0,0.8);
+	bottom: 0;
+	left: 0;
+	opacity: 0;
+	overflow-y: auto;
+	position: fixed;
+	right: 0;
+	top: 0;
+	transition: opacity 0.3s;
+	z-index: 1000;
+}
+
+.sm-popup > .visible {
+	opacity: 1;
+}
+
+.sm-popup > .invisible {
+	opacity: 0;
+}
+
+.sm-popup-container {
+	display: table;
+	height: 100%;
+	width: 100%;
+}
+
+.sm-popup-window {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.sm-popup-window > .sm-popup-content {
+	background-color: #eaeaea;
+	border: 1px solid #000000;
+	border-radius: 5px;
+	box-shadow: 0 0 15px #000000;
+	margin: -500px auto;
+	opacity: 0;
+	padding: 20px;
+	transition: margin 0.2s, opacity 0.3s;
+	transition-delay: 0.2s;
+	width: 480px;
+}
+
+.sm-popup-window > .visible {
+	margin: 0px auto;
+	opacity: 1;
+}
+
+.sm-popup-window > .invisible {
+	margin: -500px auto;
+	opacity: 0;
+}
