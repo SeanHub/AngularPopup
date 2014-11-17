@@ -2,6 +2,13 @@
 
 AngularJS popup/modal directive. Provides an overlay of content which will drop in and out of view accompanied by a fading backdrop.  
 
+##Installation
+
+- Install using bower by adding to bower.json or installing manually.
+>``
+bower install sm-angular-popup
+``   
+
 ##Usage
 
 - Add sm.popup.css to your application and include sm.popup as a module dependency.
