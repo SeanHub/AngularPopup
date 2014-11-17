@@ -5,39 +5,37 @@ AngularJS popup/modal directive. Provides an overlay of content which will drop 
 ##Installation
 
 - Install using bower by adding to bower.json or installing manually.
->``
+```bash
 bower install sm-angular-popup
-``   
+```
 
 ##Usage
 
 - Add sm.popup.css to your application and include sm.popup as a module dependency.
->``
+```bash
 angular.module('app', ['sm.popup']);
-``   
+``` 
 
 - Within your controller, include popup as a dependency. You can then use the following to show a popup.
->``
+```bash
 popup.create({ controller: 'popupCtrl', templateUrl: 'popup.html' }).open();
-``
+``` 
 
 ##Methods
 
 - The only method initially available to the popup directive is create, as used above. However, once created you can then open and close the popup. You should do this inside of a controller that you have referenced inside of the popup function. You can reference the popup by including the dependency popupInstance.  
-
->``
+```bash
 angular.module('app').controller('popupCtrl', function ($scope, popupInstance) {
 	$scope.closePopup = function () {
 		popupInstance.close();
 	};
 });
-``
+``` 
 
 - By default the scope of the popup is private, however you can allow access to global scopes by setting global: true within the popup function configuration object.  
-
->``
+```bash
 popup.create({ controller: 'popupCtrl', global: true, templateUrl: 'popup.html' }).open();
-``
+``` 
 
 ##To Do
 
