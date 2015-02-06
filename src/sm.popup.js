@@ -63,12 +63,15 @@ angular.module('sm.popup', ['sm.popup.tpl.html'])
 			};
 
 			if (config.controller) {
-				$scope[config.controller] = $controller(config.controller, {
+                var instance = {
 					$scope: $scope,
+                    popupData: null,
 					popupInstance: {
 						close: close
 					}
-				});
+				};
+                config.data ? instance.popupData = config.data : null;
+				$scope[config.controller] = $controller(config.controller, instance);
 			};
 
 			return {
