@@ -46,9 +46,10 @@ angular.module('sm.popup', ['sm.popup.tpl.html'])
 			var destroy = function () {
 				var popupArray = $document.find('sm.popup');
 				for (var i = 0; i < popupArray.length; i++) {
-					if (Number(popupArray[i].getAttribute('data-sm-popup-id')) === numberOfPopups-1) {
+                    var popup = popupArray[i];
+					if (Number(popup.getAttribute('data-sm-popup-id')) === numberOfPopups-1) {
 						numberOfPopups--;
-						popupArray[i].remove();
+                        popup.parentNode.removeChild(popup);
 						$scope.$destroy();
 					};
 				};
